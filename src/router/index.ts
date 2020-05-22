@@ -76,8 +76,14 @@ const routes: RouteConfig[] = [
             name: "canvas",
             component: () =>
               import(
-                /* webpackChunkName: "typescript"*/ "@/views/note/edit/canvas.vue"
+                /* webpackChunkName: "canvas"*/ "@/views/note/edit/canvas.vue"
               ),
+          },
+          {
+            path: "git",
+            name: "git",
+            component: () =>
+              import(/* webpackChunkName: "git"*/ "@/views/note/edit/Git.vue"),
           },
         ],
       },

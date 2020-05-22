@@ -107,6 +107,15 @@ export default class dashboard extends Vue {
             value: "/note/canvas",
           },
         },
+        {
+          entity: {
+            id: 9,
+            name: "Git",
+            icon: "el-icon-tickets",
+            alias: "Git命令",
+            value: "/note/git",
+          },
+        },
       ],
     },
     // {
