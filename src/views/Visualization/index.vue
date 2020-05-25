@@ -14,7 +14,7 @@
           :key="index"
           @click.native="carouselClick(item, index)"
         >
-          <img :src="item.imageUrl" style=" height: 100%" />
+          <img :src="item.imageUrl" style=" width: 100%;height:100% " />
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -40,48 +40,96 @@ export default class Visualization extends Vue {
       route: "/note/vue",
       data: 50,
       imageUrl: require("../../assets/images/Technical-Logo/vue.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
       name: "React",
       route: "/note/react",
       data: 0,
       imageUrl: require("../../assets/images/Technical-Logo/React.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
       name: "Angular",
       route: "/note/angular",
       data: 0,
       imageUrl: require("../../assets/images/Technical-Logo/Angular.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
       name: "typeScript",
       route: "/note/typeScript",
       data: 30,
       imageUrl: require("../../assets/images/Technical-Logo/typescript.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
-      name: "jquery",
+      name: "canvas",
       route: "/note/vue",
       data: 50,
       imageUrl: require("../../assets/images/Technical-Logo/jquery.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
-      name: "node",
-      route: "/note/vue",
+      name: "Git",
+      route: "/note/git",
       data: 20,
-      imageUrl: require("../../assets/images/Technical-Logo/jquery.jpg"),
+      imageUrl: require("../../assets/images/Technical-Logo/git.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
       name: "typeScript",
       route: "/note/vue",
       data: 43,
-      imageUrl: require("../../assets/images/Technical-Logo/vue.jpg"),
+      imageUrl: require("../../assets/images/Technical-Logo/node.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
     {
       name: "typeScript",
       route: "/note/vue",
       data: 20,
       imageUrl: require("../../assets/images/Technical-Logo/vue.jpg"),
+      progress: [
+        {
+          problem: "出现的问题",
+          solve: "解决的方案",
+        },
+      ],
     },
   ];
   mounted() {}

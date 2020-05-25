@@ -5,15 +5,19 @@
     <header>
       <div id="left">
         <i
-          class="el-icon-s-unfold icon-collpase"
+          class="el-icon-s-unfold icon-collpase Icon-i"
           @click="Collpase"
           v-if="isCollpase === true"
         ></i>
-        <i class="el-icon-s-fold icon-collpase" @click="Collpase" v-else></i>
+        <i
+          class="el-icon-s-fold icon-collpase Icon-i"
+          @click="Collpase"
+          v-else
+        ></i>
       </div>
       <div id="right">
         <span class="search">
-          <i class="el-icon-search" @click="searchClick"></i>
+          <i class="el-icon-search Icon-i" @click="searchClick"></i>
           <transition>
             <el-autocomplete
               v-show="searchFlag"
@@ -24,11 +28,11 @@
             ></el-autocomplete>
           </transition>
         </span>
-        <i class="el-icon-s-release icon-task" title="任务"></i>
+        <i class="el-icon-s-release icon-task Icon-i" title="任务"></i>
         <span class="user">
           <el-dropdown>
             <img src="../../../assets/images/mainBg.jpg" alt="" />
-            <i class="el-icon-caret-bottom"></i>
+            <i class="el-icon-caret-bottom Icon-i"></i>
 
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item
@@ -161,7 +165,7 @@ $iconBg: rgba(0, 0, 0, 0.1);
     }
   }
 }
-i {
+.Icon-i {
   display: inline-block;
   font-size: 40px;
   color: $color;
