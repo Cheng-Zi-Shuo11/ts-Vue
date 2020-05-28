@@ -114,7 +114,6 @@
               v-model="ruleForm.address.county"
               placeholder="区县"
               size="small"
-              :disabled="disabled"
             >
               <el-option
                 v-for="item in option"
@@ -128,7 +127,6 @@
             <el-input
               v-model="ruleForm.address.detailed"
               placeholder="详细地址"
-              :disabled="disabled"
             ></el-input>
           </template>
         </el-form-item>

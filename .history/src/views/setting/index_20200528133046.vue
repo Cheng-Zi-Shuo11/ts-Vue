@@ -128,7 +128,6 @@
             <el-input
               v-model="ruleForm.address.detailed"
               placeholder="详细地址"
-              :disabled="disabled"
             ></el-input>
           </template>
         </el-form-item>

@@ -80,12 +80,7 @@
 
         <el-form-item label="地址" prop="address">
           <template>
-            <el-select
-              v-model="ruleForm.address.province"
-              placeholder="省份"
-              size="small"
-              :disabled="disabled"
-            >
+            <el-select v-model="ruleForm.address.province" placeholder="省份">
               <el-option
                 v-for="item in option"
                 :label="item.label"
@@ -94,13 +89,7 @@
               >
               </el-option>
             </el-select>
-
-            <el-select
-              v-model="ruleForm.address.city"
-              placeholder="城市"
-              size="small"
-              :disabled="disabled"
-            >
+            <el-select v-model="ruleForm.address.province" placeholder="城市">
               <el-option
                 v-for="item in option"
                 :label="item.label"
@@ -109,13 +98,7 @@
               >
               </el-option>
             </el-select>
-
-            <el-select
-              v-model="ruleForm.address.county"
-              placeholder="区县"
-              size="small"
-              :disabled="disabled"
-            >
+            <el-select v-model="ruleForm.address.province" placeholder="区县">
               <el-option
                 v-for="item in option"
                 :label="item.label"
@@ -124,12 +107,6 @@
               >
               </el-option>
             </el-select>
-
-            <el-input
-              v-model="ruleForm.address.detailed"
-              placeholder="详细地址"
-              :disabled="disabled"
-            ></el-input>
           </template>
         </el-form-item>
 
@@ -175,9 +152,6 @@ export default class ClassName extends Vue {
     gender: "",
     address: {
       province: "",
-      city: "",
-      county: "",
-      detailed: "",
     },
   };
   private rules = {

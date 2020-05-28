@@ -51,96 +51,6 @@
           ></el-input>
         </el-form-item>
 
-        <el-form-item label="邮箱" prop="email">
-          <el-input
-            v-model="ruleForm.email"
-            placeholder="请输入邮箱"
-            :disabled="disabled"
-          ></el-input>
-        </el-form-item>
-
-        <el-form-item label="性别" prop="gender">
-          <el-radio
-            v-model="ruleForm.gender"
-            label="1"
-            border
-            size="medium"
-            :disabled="disabled"
-            >男性前端
-          </el-radio>
-          <el-radio
-            v-model="ruleForm.gender"
-            label="2"
-            border
-            size="medium"
-            :disabled="disabled"
-            >女性前端
-          </el-radio>
-        </el-form-item>
-
-        <el-form-item label="地址" prop="address">
-          <template>
-            <el-select
-              v-model="ruleForm.address.province"
-              placeholder="省份"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-select
-              v-model="ruleForm.address.city"
-              placeholder="城市"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-select
-              v-model="ruleForm.address.county"
-              placeholder="区县"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-input
-              v-model="ruleForm.address.detailed"
-              placeholder="详细地址"
-              :disabled="disabled"
-            ></el-input>
-          </template>
-        </el-form-item>
-
-        <el-form-item label="简介" prop="">
-          <el-input
-            type="textarea"
-            v-model="ruleForm.textarea"
-            :disabled="disabled"
-          ></el-input>
-        </el-form-item>
-
         <el-form-item>
           <el-button type="success" @click="submitForm('ruleForm')"
             >保存</el-button
@@ -171,14 +81,13 @@ export default class ClassName extends Vue {
   private ruleForm = {
     imageUrl: "",
     name: "",
-    email: "",
-    gender: "",
-    address: {
-      province: "",
-      city: "",
-      county: "",
-      detailed: "",
-    },
+    region: "",
+    date1: "",
+    date2: "",
+    delivery: false,
+    type: [],
+    resource: "",
+    desc: "",
   };
   private rules = {
     name: [
@@ -285,6 +194,7 @@ export default class ClassName extends Vue {
   // 表单验证
   private submitForm(formName: any) {
     (this.$refs[formName] as elementUI).validate((valid: any) => {
+      console.log(valid);
       if (valid) {
         this.$message.success("保存成功");
         this.disabled = true;
@@ -350,10 +260,5 @@ export default class ClassName extends Vue {
 }
 .hear-img {
   display: inline-block;
-}
-
-.el-form-item__label::before {
-  content: "" !important;
-  margin-right: 0px !important;
 }
 </style>

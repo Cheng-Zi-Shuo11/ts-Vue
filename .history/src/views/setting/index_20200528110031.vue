@@ -78,60 +78,7 @@
           </el-radio>
         </el-form-item>
 
-        <el-form-item label="地址" prop="address">
-          <template>
-            <el-select
-              v-model="ruleForm.address.province"
-              placeholder="省份"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-select
-              v-model="ruleForm.address.city"
-              placeholder="城市"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-select
-              v-model="ruleForm.address.county"
-              placeholder="区县"
-              size="small"
-              :disabled="disabled"
-            >
-              <el-option
-                v-for="item in option"
-                :label="item.label"
-                :value="item.value"
-                :key="item.value"
-              >
-              </el-option>
-            </el-select>
-
-            <el-input
-              v-model="ruleForm.address.detailed"
-              placeholder="详细地址"
-              :disabled="disabled"
-            ></el-input>
-          </template>
-        </el-form-item>
+        <el-form-item label="地址" prop="address"></el-form-item>
 
         <el-form-item label="简介" prop="">
           <el-input
@@ -173,12 +120,7 @@ export default class ClassName extends Vue {
     name: "",
     email: "",
     gender: "",
-    address: {
-      province: "",
-      city: "",
-      county: "",
-      detailed: "",
-    },
+    address：“
   };
   private rules = {
     name: [
