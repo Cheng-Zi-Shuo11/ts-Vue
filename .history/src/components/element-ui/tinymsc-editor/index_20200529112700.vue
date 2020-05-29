@@ -1,0 +1,16 @@
+<!-- @format -->
+
+<template>
+  <div></div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
+  name: "tinymscEditor",
+})
+export default class tinymscEditor extends Vue {}
+</script>
+
+<style lang="less" scope></style>
