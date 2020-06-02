@@ -111,7 +111,7 @@ export default class ClassName extends Vue {
     password: [{ validator: this.validatePassword, trigger: "blur" }],
   };
 
-  private UserImage = require("@/assets/images/mainBg.jpg");
+  private UserImage = require("../../../../assets/images/mainBg.jpg");
 
   private handleLogin() {
     if (this.VerificationVal === this.identifyCode) {

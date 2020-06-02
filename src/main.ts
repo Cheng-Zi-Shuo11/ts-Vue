@@ -12,11 +12,13 @@ import "@/styles/element-variables.scss";
 import "@/mock";
 import echarts from "echarts";
 import jquery from "jquery";
+import util from "@/util";
 
 Vue.config.productionTip = false;
 Vue.use(ElmentUI);
 Vue.prototype.$echarts = echarts;
 Vue.prototype.$ = jquery;
+Vue.prototype.$util = util;
 
 new Vue({
   router,

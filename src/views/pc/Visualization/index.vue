@@ -39,7 +39,7 @@ export default class Visualization extends Vue {
       name: "vue",
       route: "/note/vue",
       data: 50,
-      imageUrl: require("../../assets/images/Technical-Logo/vue.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/vue.jpg"),
       progress: [
         {
           problem: "Declaration or statement expected.",
@@ -55,7 +55,7 @@ export default class Visualization extends Vue {
       name: "React",
       route: "/note/react",
       data: 0,
-      imageUrl: require("../../assets/images/Technical-Logo/React.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/React.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -67,7 +67,7 @@ export default class Visualization extends Vue {
       name: "Angular",
       route: "/note/angular",
       data: 0,
-      imageUrl: require("../../assets/images/Technical-Logo/Angular.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/Angular.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -79,7 +79,7 @@ export default class Visualization extends Vue {
       name: "typeScript",
       route: "/note/typeScript",
       data: 30,
-      imageUrl: require("../../assets/images/Technical-Logo/typescript.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/typescript.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -91,7 +91,7 @@ export default class Visualization extends Vue {
       name: "canvas",
       route: "/note/vue",
       data: 50,
-      imageUrl: require("../../assets/images/Technical-Logo/jquery.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/jquery.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -103,7 +103,7 @@ export default class Visualization extends Vue {
       name: "Git",
       route: "/note/git",
       data: 20,
-      imageUrl: require("../../assets/images/Technical-Logo/git.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/git.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -115,7 +115,7 @@ export default class Visualization extends Vue {
       name: "typeScript",
       route: "/note/vue",
       data: 43,
-      imageUrl: require("../../assets/images/Technical-Logo/node.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/node.jpg"),
       progress: [
         {
           problem: "出现的问题",
@@ -127,7 +127,7 @@ export default class Visualization extends Vue {
       name: "typeScript",
       route: "/note/vue",
       data: 20,
-      imageUrl: require("../../assets/images/Technical-Logo/vue.jpg"),
+      imageUrl: require("@/assets/images/Technical-Logo/vue.jpg"),
       progress: [
         {
           problem: "出现的问题",

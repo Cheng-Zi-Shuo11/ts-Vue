@@ -134,7 +134,7 @@ export default class Tabs extends Vue {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
-    background: url(../../../assets/images/adminBg.jpg) 100% 59%;
+    background: url(../../../../assets/images/adminBg.jpg) 100% 59%;
     background-size: 100%;
     box-shadow: 0px 10px 14px #333333;
     .el-tabs__header {

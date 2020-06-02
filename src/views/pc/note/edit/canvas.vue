@@ -183,7 +183,7 @@ export default class ClassName extends Vue {
         }
       }
     };
-    img.src = "../../../assets/images/mainBg.jpg";
+    img.src = "../../../../assets/images/mainBg.jpg";
   }
 }
 </script>

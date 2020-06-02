@@ -32,7 +32,8 @@
         <span class="user">
           <el-dropdown>
             <span
-              >前进的小前端 <img src="../../../assets/images/mainBg.jpg" alt=""
+              >前进的小前端
+              <img src="../../../../assets/images/mainBg.jpg" alt=""
             /></span>
             <i class="el-icon-caret-bottom Icon-i"></i>
 
@@ -105,7 +106,7 @@ $iconBg: rgba(0, 0, 0, 0.1);
 #admin-container {
   width: 100%;
   height: $height;
-  background: url(../../../assets/images/adminBg.jpg) 100% no-repeat;
+  background: url(../../../../assets/images/adminBg.jpg) 100% no-repeat;
   background-size: 100%;
   > header {
     display: flex;

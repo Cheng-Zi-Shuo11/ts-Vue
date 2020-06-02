@@ -148,7 +148,7 @@ import { ChianProvinceModule } from "@/store/modules/ChinaProvince";
 })
 export default class user extends Vue {
   private imageUrl: any = "";
-  private defaultImage: any = require("../../../assets/images/mainBg.jpg");
+  private defaultImage: any = require("../../../../assets/images/mainBg.jpg");
   private progressFlag: boolean = false;
   private progressPercent: number = 25;
   private disabled: boolean = true;
