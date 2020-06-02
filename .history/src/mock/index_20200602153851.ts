@@ -7,7 +7,7 @@ let token = Random.id();
 const data = {
   mobilephone: "18536599049",
   password: "a12345",
-  tokenStr: token,
+  tokenStr: 123,
 };
 
 Mock.mock("/api/login", "post", data);

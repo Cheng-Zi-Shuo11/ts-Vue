@@ -156,13 +156,6 @@ const routes: RouteConfig[] = [
       },
     ],
   },
-  {
-    path: "/mobile",
-    component: () =>
-      import(
-        /* webpackChuunkName: "mobile" */ "@/views/mobile/mobile/index.vue"
-      ),
-  },
 ];
 
 const router = new VueRouter({

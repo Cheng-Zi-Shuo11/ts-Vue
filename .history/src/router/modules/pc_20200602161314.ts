@@ -1,11 +1,6 @@
 /** @format */
 
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
-
-Vue.use(VueRouter);
-
-const routes: RouteConfig[] = [
+export default [
   {
     path: "/",
     redirect: "/login",
@@ -32,7 +27,7 @@ const routes: RouteConfig[] = [
         name: "首页page",
         component: () =>
           import(
-            /* webpackChunkName: "dashboardContent"*/ "@/views/pc/Visualization/index.vue"
+            /* webpackChunkName: "dashboardContent"*/ "@/views/Visualization/index.vue"
           ),
       },
       // 以 / 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。
@@ -40,22 +35,20 @@ const routes: RouteConfig[] = [
         path: "/note",
         name: "笔记",
         component: () =>
-          import(/* webpackChunkName: "Note"*/ "@/views/pc/note/index.vue"),
+          import(/* webpackChunkName: "Note"*/ "@/views/note/index.vue"),
         children: [
           {
             path: "vue",
             name: "vue",
             component: () =>
-              import(
-                /* webpackChunkName: "Vue"*/ "@/views/pc/note/edit/vue.vue"
-              ),
+              import(/* webpackChunkName: "Vue"*/ "@/views/note/edit/vue.vue"),
           },
           {
             path: "react",
             name: "react",
             component: () =>
               import(
-                /* webpackChunkName: "React"*/ "@/views/pc/note/edit/react.vue"
+                /* webpackChunkName: "React"*/ "@/views/note/edit/react.vue"
               ),
           },
           {
@@ -63,7 +56,7 @@ const routes: RouteConfig[] = [
             name: "typescript",
             component: () =>
               import(
-                /* webpackChunkName: "typescript"*/ "@/views/pc/note/edit/typescript.vue"
+                /* webpackChunkName: "typescript"*/ "@/views/note/edit/typescript.vue"
               ),
           },
           {
@@ -71,7 +64,7 @@ const routes: RouteConfig[] = [
             name: "javascript",
             component: () =>
               import(
-                /* webpackChunkName: "typescript"*/ "@/views/pc/note/edit/javascript.vue"
+                /* webpackChunkName: "typescript"*/ "@/views/note/edit/javascript.vue"
               ),
           },
           {
@@ -79,23 +72,21 @@ const routes: RouteConfig[] = [
             name: "canvas",
             component: () =>
               import(
-                /* webpackChunkName: "canvas"*/ "@/views/pc/note/edit/canvas.vue"
+                /* webpackChunkName: "canvas"*/ "@/views/note/edit/canvas.vue"
               ),
           },
           {
             path: "git",
             name: "git",
             component: () =>
-              import(
-                /* webpackChunkName: "git"*/ "@/views/pc/note/edit/Git.vue"
-              ),
+              import(/* webpackChunkName: "git"*/ "@/views/note/edit/Git.vue"),
           },
           {
             path: "Webpack",
             name: "Webpack",
             component: () =>
               import(
-                /* webpackChunkName: "Webpack"*/ "@/views/pc/note/edit/Webpack.vue"
+                /* webpackChunkName: "Webpack"*/ "@/views/note/edit/Webpack.vue"
               ),
           },
         ],
@@ -105,7 +96,7 @@ const routes: RouteConfig[] = [
         name: "ui库",
         component: () =>
           import(
-            /* webpackChunkName: "uiLibrary"*/ "@/views/pc/uiLibrary/index.vue"
+            /* webpackChunkName: "uiLibrary"*/ "@/views/uiLibrary/index.vue"
           ),
         children: [
           {
@@ -113,7 +104,7 @@ const routes: RouteConfig[] = [
             name: "element-ui",
             component: () =>
               import(
-                /* webpackChunkName: "element-ui"*/ "@/views/pc/uiLibrary/edit/elementUI.vue"
+                /* webpackChunkName: "element-ui"*/ "@/views/uiLibrary/edit/elementUI.vue"
               ),
           },
         ],
@@ -123,7 +114,7 @@ const routes: RouteConfig[] = [
         name: "组件",
         component: () =>
           import(
-            /* webpackChunkName: "component" */ "@/views/pc/component/index.vue"
+            /* webpackChunkName: "component" */ "@/views/component/index.vue"
           ),
         children: [
           {
@@ -131,7 +122,7 @@ const routes: RouteConfig[] = [
             name: "富文本",
             component: () =>
               import(
-                /* webpackChunkName: "component-RichTetx" */ "@/components/pc/element-ui/RichText.vue"
+                /* webpackChunkName: "component-RichTetx" */ "@/components/element-ui/RichText.vue"
               ),
           },
         ],
@@ -140,52 +131,18 @@ const routes: RouteConfig[] = [
         path: "/setting",
         name: "设置",
         component: () =>
-          import(
-            /* webpackChunkName: "Setting"*/ "@/views/pc/setting/index.vue"
-          ),
+          import(/* webpackChunkName: "Setting"*/ "@/views/setting/index.vue"),
         children: [
           {
             path: "userSetting",
             name: "个人中心",
             component: () =>
               import(
-                /* webpackChunkName: "User"*/ "@/views/pc/setting/setUp/user.vue"
+                /* webpackChunkName: "User"*/ "@/views/setting/setUp/user.vue"
               ),
           },
         ],
       },
     ],
   },
-  {
-    path: "/mobile",
-    component: () =>
-      import(
-        /* webpackChuunkName: "mobile" */ "@/views/mobile/mobile/index.vue"
-      ),
-  },
 ];
-
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-});
-
-router.beforeEach((to, from, next) => {
-  //to 将要访问的路径
-  //from 代表从那个路径跳转而来
-  //next 是一个函数，放行
-  //    next() 放行     next('/login) 强制跳转
-  if (to.path === "/login") {
-    next();
-  } else {
-    const tokenStr = window.sessionStorage.getItem("tokenId");
-    if (!tokenStr) {
-      next("/login");
-    } else {
-      next();
-    }
-  }
-});
-
-export default router;

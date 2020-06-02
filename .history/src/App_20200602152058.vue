@@ -14,9 +14,7 @@ import { Vue, Component } from "vue-property-decorator";
 export default class App extends Vue {
   private mounted() {
     if (document.body.clientWidth < 787) {
-      this.$router.replace("/mobile");
-    } else {
-      this.$router.replace("/dashboard");
+      this.$router.push("/dashboard");
     }
   }
 }

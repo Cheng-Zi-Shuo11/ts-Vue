@@ -155,13 +155,11 @@ const routes: RouteConfig[] = [
         ],
       },
     ],
-  },
-  {
-    path: "/mobile",
-    component: () =>
-      import(
-        /* webpackChuunkName: "mobile" */ "@/views/mobile/mobile/index.vue"
-      ),
+    {
+      path: "/mobile",
+      component: () =>
+        import(/* webpackChuunkName: "mobile" */ "@/views/mobile/index.vue"),
+    },
   },
 ];
 

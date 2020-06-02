@@ -12,13 +12,7 @@ import { Vue, Component } from "vue-property-decorator";
   name: "app",
 })
 export default class App extends Vue {
-  private mounted() {
-    if (document.body.clientWidth < 787) {
-      this.$router.replace("/mobile");
-    } else {
-      this.$router.replace("/dashboard");
-    }
-  }
+  private created() {}
 }
 </script>
 <style lang="scss"></style>
