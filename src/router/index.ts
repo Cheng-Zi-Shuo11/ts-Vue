@@ -3,11 +3,11 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import pc from "./modules/pc";
-import { mobile } from "./modules/mobile";
+import mobile from "./modules/mobile";
 import util from "@/util";
 
 Vue.use(VueRouter);
-
+// console.log(util.routerFlag);
 // let routes: RouteConfig[];
 // if (util.routerFlag === false) {
 //   routes = pc;

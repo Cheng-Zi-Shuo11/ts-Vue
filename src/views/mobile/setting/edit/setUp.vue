@@ -1,7 +1,8 @@
 <!-- @format -->
+
 <template>
-  <div id="popover">
-    hah
+  <div id="setUp">
+    setUp组件---
   </div>
 </template>
 

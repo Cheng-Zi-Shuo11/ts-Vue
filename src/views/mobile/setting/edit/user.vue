@@ -1,14 +1,17 @@
 <!-- @format -->
+
 <template>
-  <div id="popover">
-    hah
+  <div>
+    用户中心
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component
+@Component({
+  name: "user",
+})
 export default class ClassName extends Vue {}
 </script>
 
