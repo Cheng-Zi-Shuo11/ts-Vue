@@ -11,21 +11,29 @@
       />
     </div>
     <div class="right">
-      <span class="userName">用户名</span>
+      <span class="userName"> {{ userName }} </span>
       <span class="account">账户名</span>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import { Image as VanImage } from "vant";
+import { Component, Vue, Watch } from "vue-property-decorator";
+import { MobileUserModule } from "@/store/mobile/modules/user";
 
-Vue.use(VanImage);
 @Component({
   name: "UserImage",
 })
-export default class UserImage extends Vue {}
+export default class UserImage extends Vue {
+  private userName = MobileUserModule.userName;
+
+  private created() {}
+
+  @Watch("MobileUserModule.userName")
+  private getName(val) {
+    console.log(val);
+  }
+}
 </script>
 
 <style lang="less" scope>

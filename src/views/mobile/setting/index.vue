@@ -3,7 +3,11 @@
 <template>
   <div id="setting">
     <van-cell-group>
-      <van-cell is-link to="/mobile/setting/user" @click="showPopup">
+      <van-cell
+        is-link
+        to="/mobile/setting/user"
+        @click="showPopup({ text: '个人信息' })"
+      >
         <UserImage></UserImage>
       </van-cell>
       <van-cell
@@ -24,7 +28,7 @@
       :style="{ width: '100%', height: '100%' }"
     >
       <!-- 不直接引用top组件，没有使用vuex状态管理，启用状态管理 -->
-      <van-nav-bar :title="navTitle" left-arrow @click-left="onClickLeft" />
+      <van-nav-bar :left-text="navTitle" left-arrow @click-left="onClickLeft" />
       <router-view></router-view>
     </van-popup>
   </div>
@@ -32,12 +36,6 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import { Cell, CellGroup, Popup, NavBar } from "vant";
-
-Vue.use(Cell);
-Vue.use(CellGroup);
-Vue.use(Popup);
-Vue.use(NavBar);
 
 @Component({
   name: "setting",

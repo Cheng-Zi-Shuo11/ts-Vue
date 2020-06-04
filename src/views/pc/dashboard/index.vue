@@ -28,7 +28,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { navMenuModule } from "@/store/modules/navMenu";
+import { navMenuModule } from "@/store/pc/modules/navMenu";
 
 @Component({
   name: "dashboard",

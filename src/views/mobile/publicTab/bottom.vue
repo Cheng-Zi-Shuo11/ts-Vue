@@ -18,9 +18,7 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import { Tabbar, TabbarItem } from "vant";
-Vue.use(Tabbar);
-Vue.use(TabbarItem);
+
 @Component({
   name: "bottomTab",
 })

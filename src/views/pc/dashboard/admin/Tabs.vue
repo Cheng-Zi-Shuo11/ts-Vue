@@ -39,7 +39,6 @@
 
 <script lang="ts">
 import { Component, Vue, Prop, Emit, Watch } from "vue-property-decorator";
-import { navMenuModule } from "@/store/modules/navMenu";
 
 declare module "vue/types/vue" {
   interface Vue {

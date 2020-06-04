@@ -67,7 +67,6 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import { Form as ElForm } from "element-ui";
-import { UserModule } from "@/store/modules/user";
 import axios from "axios";
 
 @Component({

@@ -16,7 +16,7 @@ export interface INavMenu {
   imageUrl: any;
 }
 
-interface ISetNavmenu {
+export interface ISetNavmenu {
   [key: string]: any;
 }
 

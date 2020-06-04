@@ -8,9 +8,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { NavBar } from "vant";
-
-Vue.use(NavBar);
 
 @Component({
   name: "top",

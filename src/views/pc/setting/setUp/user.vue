@@ -141,8 +141,8 @@
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
 import axios from "axios";
-import { navMenuModule } from "@/store/modules/navMenu";
-import { ChianProvinceModule } from "@/store/modules/ChinaProvince";
+import { navMenuModule } from "@/store/pc/modules/navMenu";
+import { ChianProvinceModule } from "@/store/pc/modules/ChinaProvince";
 @Component({
   name: "user",
 })

@@ -2,18 +2,15 @@
 
 import Vue from "vue";
 import Vuex from "vuex";
-import { IAppState } from "./modules/app";
-import { IUserState } from "./modules/user";
-import { INavMenu } from "./modules/navMenu";
-import { IChia } from "./modules/ChinaProvince";
+
+import { IPC } from "./pc/index";
+import { IMOBILE } from "./mobile/index";
 
 Vue.use(Vuex);
 
 export interface IRootState {
-  app: IAppState;
-  user: IUserState;
-  navMenu: INavMenu;
-  ChinaProvince: IChia;
+  pc: IPC;
+  mobile: IMOBILE;
 }
 
 export default new Vuex.Store<IRootState>({});
