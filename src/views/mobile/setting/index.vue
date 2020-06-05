@@ -68,4 +68,8 @@ export default class setting extends Vue {
 }
 </script>
 
-<style lang="less" scope></style>
+<style lang="less" scope>
+#setting {
+  background-color: pink;
+}
+</style>

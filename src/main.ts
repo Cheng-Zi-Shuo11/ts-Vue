@@ -35,6 +35,15 @@ import {
   Swipe,
   SwipeItem,
   Lazyload,
+  Skeleton,
+  Switch,
+  PullRefresh,
+  Toast,
+  Collapse,
+  CollapseItem,
+  Sidebar,
+  SidebarItem,
+  NoticeBar,
 } from "vant"; // vant-ui
 import "@vant/touch-emulator";
 
@@ -56,6 +65,15 @@ Vue.use(DropdownItem);
 Vue.use(Swipe);
 Vue.use(SwipeItem);
 Vue.use(Lazyload);
+Vue.use(Skeleton);
+Vue.use(Switch);
+Vue.use(PullRefresh);
+Vue.use(Toast);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
+Vue.use(Sidebar);
+Vue.use(SidebarItem);
+Vue.use(NoticeBar);
 
 Vue.config.productionTip = false;
 Vue.use(ElmentUI, { size: "small", zIndex: 3000 });

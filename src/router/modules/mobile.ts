@@ -83,6 +83,12 @@ export default [
           },
         ],
       },
+      {
+        path: "note",
+        name: "笔记",
+        component: () =>
+          import(/* webpackChunkName:"note" */ "@/views/mobile/note/index.vue"),
+      },
     ],
   },
 ];

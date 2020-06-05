@@ -29,4 +29,10 @@ import setting from "./setting/index.vue";
 export default class ClassName extends Vue {}
 </script>
 
-<style lang="less" scope></style>
+<style lang="less" scope>
+#mobile {
+  .content {
+    margin-bottom: 100px;
+  }
+}
+</style>

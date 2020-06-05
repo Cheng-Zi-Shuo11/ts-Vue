@@ -52,7 +52,7 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
-export default class ClassName extends Vue {
+export default class bug extends Vue {
   @Prop() public TechicalItem!: any;
 }
 </script>
