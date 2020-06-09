@@ -15,6 +15,9 @@ import echarts from "echarts";
 import jquery from "jquery";
 import util from "@/util";
 
+// 引入iconFont字体图标库
+import "./assets/icon/font_kaqaml4p1c/iconfont.js";
+
 // 移动端引入组件
 import {
   Button,
@@ -44,6 +47,8 @@ import {
   Sidebar,
   SidebarItem,
   NoticeBar,
+  Empty,
+  List,
 } from "vant"; // vant-ui
 import "@vant/touch-emulator";
 
@@ -74,6 +79,8 @@ Vue.use(CollapseItem);
 Vue.use(Sidebar);
 Vue.use(SidebarItem);
 Vue.use(NoticeBar);
+Vue.use(List);
+Vue.use(Empty);
 
 Vue.config.productionTip = false;
 Vue.use(ElmentUI, { size: "small", zIndex: 3000 });

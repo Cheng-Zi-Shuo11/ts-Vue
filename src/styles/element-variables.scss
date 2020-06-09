@@ -8,6 +8,14 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
   theme: $--color-primary
 }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 // input输入框
 // .el-input {
 //   width: 100px !important;

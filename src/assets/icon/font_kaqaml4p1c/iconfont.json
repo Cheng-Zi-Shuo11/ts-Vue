@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6496024",
+      "name": "Angular",
+      "font_class": "Angular",
+      "unicode": "e798",
+      "unicode_decimal": 59288
+    },
+    {
+      "icon_id": "6496027",
+      "name": "React",
+      "font_class": "React",
+      "unicode": "e799",
+      "unicode_decimal": 59289
+    },
+    {
+      "icon_id": "6496028",
+      "name": "jQuery",
+      "font_class": "jQuery",
+      "unicode": "e79a",
+      "unicode_decimal": 59290
+    },
+    {
+      "icon_id": "11981393",
+      "name": "canvas",
+      "font_class": "canvas",
+      "unicode": "e93b",
+      "unicode_decimal": 59707
+    },
+    {
+      "icon_id": "13303493",
+      "name": "git",
+      "font_class": "git",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "13304114",
+      "name": "typescript",
+      "font_class": "typescript",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "13304145",
+      "name": "vue",
+      "font_class": "vue",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    }
+  ]
+}
