@@ -129,6 +129,40 @@ export default [
                 /* webpackChunkName: "component-RichTetx" */ "@/components/pc/element-ui/RichText.vue"
               ),
           },
+          {
+            path: "EchartsTable",
+            name: "echarts表格",
+            component: () =>
+              import(
+                /* webpackChunkName: "component-RichTetx" */ "@/components/pc/echarts/table.vue"
+              ),
+          },
+        ],
+      },
+      {
+        path: "/interview",
+        name: "面试",
+        component: () =>
+          import(
+            /* webpackChunkName: "interview"*/ "@/views/pc/interview/index.vue"
+          ),
+        children: [
+          {
+            path: "vue",
+            name: "vue面试题",
+            component: () =>
+              import(
+                /* webpackChunkName: "interview_vue"*/ "@/views/pc/interview/content/vue.vue"
+              ),
+          },
+          {
+            path: "js",
+            name: "js面试题",
+            component: () =>
+              import(
+                /* webpackChunkName: "interview_javascript"*/ "@/views/pc/interview/content/javaScript.vue"
+              ),
+          },
         ],
       },
       {

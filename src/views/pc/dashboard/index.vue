@@ -166,6 +166,15 @@ export default class dashboard extends Vue {
             value: "/component/RichText",
           },
         },
+        {
+          entity: {
+            id: 40,
+            name: "RichText",
+            icon: "el-icon-search",
+            alias: "Echarts 表格",
+            value: "/component/EchartsTable",
+          },
+        },
       ],
     },
     {
@@ -185,6 +194,37 @@ export default class dashboard extends Vue {
             icon: "el-icon-s-tools",
             alias: "个人中心",
             value: "/setting/userSetting",
+          },
+        },
+      ],
+    },
+    {
+      // 一级
+      entity: {
+        id: 88,
+        name: "Interview",
+        icon: "el-icon-location",
+        alias: "面试",
+      },
+      childs: [
+        {
+          // 二级
+          entity: {
+            id: 89,
+            name: "Interview_vue",
+            icon: "el-icon-location-information",
+            alias: "Vue",
+            value: "/interview/vue",
+          },
+        },
+        {
+          // 二级
+          entity: {
+            id: 90,
+            name: "Interview_js",
+            icon: "el-icon-location-information",
+            alias: "javaScript",
+            value: "/interview/js",
           },
         },
       ],

@@ -10,8 +10,9 @@ import {
 } from "vuex-module-decorators";
 
 export interface IDATA {
-  PCTechicalItem: any; // 技术
+  PCTechicalItem: any; // 技术bug
   ArticalItem: any; // 笔记内容
+  InterViewItem: any; // 面试题
 }
 
 // 参数一：module名称，开启命名空间后会以name为命名空间
@@ -156,6 +157,35 @@ class MobileData extends VuexModule implements IDATA {
       b) 生态圈不繁荣，开源社区不活跃；`,
     },
   ];
+
+  public InterViewItem = {
+    vue: [],
+    javascript: [
+      {
+        problem: `css3 渐进增强和优雅降级之间的不同 ?`,
+        solve: `渐进增强：专注于内容本身，一开始针对低版本浏览器开发页面，满足最基本的功能，在针对高级浏览器进行效果，交互，达到更好的用户体验，以最低要求，实现基础功能为基准，向上兼容 br 
+          优雅降级：一开始针对一个高版本的浏览器构建页面，先完善所有功能，然后针对各个浏览器进行测试，修复，保证低级浏览器有基础功能。 以高要求，高版本为基准，向下兼容  br
+          二者区别：渐进增强前期投入资金大，周期长，但是提供了较好的平台稳定性，维护起来资金小，长期以来降低开发成本，优雅降级在短期内开发出一个只用于一个浏览器的完整功能，就可以拿去测试，市场试水，为一种节约成本的方法 br
+    `,
+      },
+      {
+        problem: `JavaScript中this是如何工作的 ?`,
+        solve: `哪个对象调用函数, 函数里面的this指向哪个对象 br
+        1. 普通函数调用 br
+        这种函数没特殊意外,指向全局对象-window br
+        2. 对象函数调用 br
+        哪个函数调用, this指向哪里 br
+        3. 构造函数调用 br
+        使用new调用的函数,其中this将会绑定到新构造的函数 br
+        4. apply和call调用 br
+        apply和call会改变传入函数的this指向 br
+        5. 箭头函数的调用 br
+        在箭头函数里面，没有 this ，箭头函数里面的 this 是继承外面的环境 br
+        代码请查看 views/pc/interview/code/this/ 文件夹下 ...... br
+        `,
+      },
+    ],
+  };
 
   @Mutation
   public addArticalItem(args: any) {

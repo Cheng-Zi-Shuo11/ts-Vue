@@ -18,6 +18,9 @@ import util from "@/util";
 // 引入iconFont字体图标库
 import "./assets/icon/font_kaqaml4p1c/iconfont.js";
 
+// 引入截图插件
+import html2canvas from "html2canvas";
+
 // 移动端引入组件
 import {
   Button,
@@ -88,6 +91,7 @@ Vue.use(ElmentUI, { size: "small", zIndex: 3000 });
 Vue.prototype.$echarts = echarts;
 Vue.prototype.$ = jquery;
 Vue.prototype.$util = util;
+Vue.prototype.$html2canvas = html2canvas;
 
 new Vue({
   router,
