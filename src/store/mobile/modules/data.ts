@@ -184,6 +184,17 @@ class MobileData extends VuexModule implements IDATA {
         代码请查看 views/pc/interview/code/this/ 文件夹下 ...... br
         `,
       },
+      {
+        problem: "JavaScript数据类型判断有哪些?",
+        solve: `
+        1. typeof  br
+        2. instanceof  br
+        3. constructor br
+        4. Object.prototype.toString.call()  br
+        代码请查看 views/pc/interview/code/数据类型检测/ 文件夹下
+        `,
+        icon: "el-icon-edit",
+      },
     ],
   };
 

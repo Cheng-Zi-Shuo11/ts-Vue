@@ -17,7 +17,34 @@
               v-for="(item, i) in InterViewJSListSolve[index]"
               :key="'Solve' + i"
             >
-              {{ InterViewJSListSolve[index][i] }}
+              {{ item }}
+            </li>
+            <!-- i标签是否显示 -->
+            <li v-if="InterViewJsList[index].icon">
+              <template
+                v-if="InterViewJsList[index].icon.constructor === Array"
+              >
+                <i
+                  v-for="(item, index) in InterViewJsList[index].icon"
+                  :key="'i' + index"
+                  :class="item"
+                >
+                </i>
+              </template>
+              <div v-else>
+                <!-- <img :class="InterViewJsList[index].icon"></img> -->
+              </div>
+            </li>
+            <!-- 图片是否显示 -->
+            <li v-if="InterViewJsList[index].img">
+              <template v-if="InterViewJsList[index].img.constructor === Array">
+                <i
+                  v-for="(item, index) in InterViewJsList[index].img"
+                  :key="'i' + index"
+                  :class="item"
+                >
+                </i>
+              </template>
             </li>
           </ul>
         </div>
@@ -37,9 +64,9 @@ export default class ClassName extends Vue {
   get InterViewJSListSolve() {
     let arr: any[] = [];
     this.InterViewJsList.forEach((item: any, index: number) => {
+      console.log(item.icon instanceof Array);
       arr.push(this.InterViewJsList[index].solve.split("br"));
     });
-
     return arr;
   }
 }
