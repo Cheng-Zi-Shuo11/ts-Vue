@@ -21,6 +21,7 @@ export default class App extends Vue {
       this.$util.routerFlag = false;
     }
     console.log(this.$util);
+    console.log("触发")
   }
 }
 </script>
