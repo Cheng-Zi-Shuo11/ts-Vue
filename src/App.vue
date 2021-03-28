@@ -11,6 +11,7 @@ import { Vue, Component } from "vue-property-decorator";
 @Component({
   name: "app",
 })
+// 测试： sourceTree 管理代码
 export default class App extends Vue {
   private mounted() {
     if (document.body.clientWidth < 787) {
